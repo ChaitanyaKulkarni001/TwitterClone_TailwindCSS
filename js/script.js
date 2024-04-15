@@ -197,7 +197,7 @@ function prependNewPost(content) {
 const postContainer = document.getElementById('postContainer');
 const newPostHTML = generateNewPostHTML(content);
 postContainer.insertAdjacentHTML('afterbegin', newPostHTML);
-postContainer.insertAdjacentHTML('afterbegin', newPostHTML);
+//postContainer.insertAdjacentHTML('afterbegin', newPostHTML);
 }
 
 // Function to generate HTML for a new post
