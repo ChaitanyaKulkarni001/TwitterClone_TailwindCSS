@@ -22,7 +22,7 @@ const posts = [
         name: 'Mark Zuckerberg',
         username: '@zuck',
         timestamp: '1 Day ago',
-        profile_image: 'https://pbs.twimg.com/profile_images/1255347936490355712/58mZ2o-C_200x200.jpg',
+        profile_image: 'img/markZuckerberg.webp',
         content: 'Big news coming soon! <br>Lorem ipsum dolor sit amet consectetur adipisicing elit.',
         image: 'https://source.unsplash.com/random/400x302'
     },
@@ -33,14 +33,14 @@ const posts = [
         timestamp: '2 Days ago',
         profile_image: 'img/satyaNadela.webp',
         content: 'Join us for our upcoming event! <br>Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        image: 'img/markZuckerberg.webp'
+        image: 'https://source.unsplash.com/random/400x302'
     },
     {
         id: 5,
         name: 'Sheryl Sandberg',
         username: '@sherylsandberg',
         timestamp: '4 Days ago',
-        profile_image: 'https://pbs.twimg.com/profile_images/1092637303566199808/84sqdyOh_200x200.jpg',
+        profile_image: 'img/shery.webp',
         content: 'Exciting things happening at our company! <br>Lorem ipsum dolor sit amet consectetur adipisicing elit.',
         image: 'https://source.unsplash.com/random/400x304'
     },
@@ -49,7 +49,7 @@ const posts = [
         name: 'Tim Cook',
         username: '@tim_cook',
         timestamp: '1 Week ago',
-        profile_image: 'https://pbs.twimg.com/profile_images/1194113895043651584/3xEaDzP7_200x200.jpg',
+        profile_image: 'img/timCOOK.webp',
         content: 'Looking forward to the future! <br>Lorem ipsum dolor sit amet consectetur adipisicing elit.',
         image: 'https://source.unsplash.com/random/400x305'
     },
@@ -58,7 +58,7 @@ const posts = [
         name: 'Susan Wojcicki',
         username: '@susanwojcicki',
         timestamp: '2 Weeks ago',
-        profile_image: 'https://pbs.twimg.com/profile_images/1157182271163366913/fFyOqFyY_200x200.jpg',
+        profile_image: 'img/susan.jpeg',
         content: 'Great progress on our latest project! <br>Lorem ipsum dolor sit amet consectetur adipisicing elit.',
         image: 'https://source.unsplash.com/random/400x306'
     },
@@ -76,7 +76,7 @@ const posts = [
         name: 'Sundar Pichai',
         username: '@sundarpichai',
         timestamp: '1 Month ago',
-        profile_image: 'https://pbs.twimg.com/profile_images/864282616597405701/M-FEJMZ0_200x200.jpg',
+        profile_image: 'img/sunder.jpeg',
         content: 'Exciting updates coming soon! <br>Lorem ipsum dolor sit amet consectetur adipisicing elit.',
         image: 'img/sunderPichai.jpeg'
     },
@@ -85,7 +85,7 @@ const posts = [
         name: 'Melinda Gates',
         username: '@melindagates',
         timestamp: '2 Months ago',
-        profile_image: 'https://pbs.twimg.com/profile_images/988775660163252226/XpgonN0X_200x200.jpg',
+        profile_image: 'img/melina.jpeg',
         content: 'Thank you for your support! <br>Lorem ipsum dolor sit amet consectetur adipisicing elit.',
         image: 'https://source.unsplash.com/random/400x309'
     }
@@ -164,7 +164,7 @@ const twitteraccarray=[
 function appendRandomPosts() {
 const postContainer = document.getElementById('postContainer');
 document.getElementById('seeMoreBtn').hidden="true"
-const numPostsToAdd = 4; // Number of random posts to add
+const numPostsToAdd = 10; // Number of random posts to add
 
 // Generate an array of unique random indices
 const randomIndices = [];
@@ -330,4 +330,85 @@ bar2.hidden = true
 const notify = document.querySelector('.notify')
 notify.addEventListener('click',()=>{
 alert("You don't have any notifications!");
+})
+pore=0
+trendings =[ "#COVID19Updates",
+"#Election2024",
+"#GameOfThronesFinale",
+"#BlackLivesMatter",
+"#Olympics2024",
+"#SpaceExploration",
+"#CryptoCraze",
+"#ClimateChangeAction",
+"#NewMovieRelease",
+"#TechInnovation",
+"Flattening the Curve",
+    "Election Predictions",
+    "Game of Thrones Finale Review",
+    "Racial Equality",
+    "Olympic Games",
+    "Space Exploration Updates",
+    "Cryptocurrency News",
+    "Climate Change Awareness",
+    "Movie Premieres",
+    "Technology Trends",
+    "Vaccine Rollout",
+    "Political Debates",
+    "Fantasy Drama Series",
+    "Social Justice Movements",
+    "Athlete Spotlights",
+    "Blockchain Technology",
+    "Green Initiatives",
+    "Film Industry News",
+    "Innovation in Technology",
+    "Health Crisis Updates"]
+hasher = [
+"#ThePandemicWave",
+    "#2024ElectionCoverage",
+    "#GOTSeriesEnd",
+    "#BLMActivism",
+    "#2024Olympics",
+    "#SpaceExplorationNews",
+    "#CryptoMarketUpdate",
+    "#ClimateActionNow",
+    "#NewMoviePremiere",
+    "#TechInnovationNews",
+    "#FlattenTheCurve",
+    "#ElectionPredictions",
+    "#GoTFinaleReview",
+    "#RacialEquality",
+    "#OlympicGames",
+    "#SpaceExplorationUpdate",
+    "#CryptoNews",
+    "#ClimateChangeAwareness",
+    "#MovieNight",
+    "#TechTrends",
+    "#VaccineRollout",
+    "#PoliticalDebate",
+    "#FantasyDrama",
+    "#SocialJustice",
+    "#AthleteSpotlight",
+    "#BlockchainTech",
+    "#GreenInitiatives",
+    "#FilmIndustry",
+    "#InnovationHub",
+    "#HealthCrisis"
+]
+tore=0
+const mores = document.querySelector('.mores')
+mores.addEventListener('click',()=>{
+    const no = document.querySelectorAll('.no');
+    no.forEach((num)=>{
+        num.textContent = Math.floor(Math.random() * 5000) + " posts"
+    })
+    const trends = document.querySelectorAll('.trend')
+    trends.forEach((num)=>{
+        pore+=1
+        num.textContent = trendings[pore]
+    const hash = document.querySelectorAll('.hash')
+    hash.forEach((num)=>{
+        num.textContent = hasher[tore]
+        tore+=1
+    })
+    })
 })
